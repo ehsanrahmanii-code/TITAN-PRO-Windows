@@ -1,0 +1,18 @@
+راهنمای ساخت EXE و نصب‌کننده TITAN PRO روی ویندوز
+================================================
+
+۱) پایتون ۳.۱۱ یا ۳.۱۲ را از python.org نصب کنید (تیک Add to PATH).
+۲) این مخزن را دانلود کنید:
+   https://github.com/ehsanrahmanii-code/TITAN-PRO-Windows
+۳) فایل بزرگ TITAN_PRO_V75_WIN_R2.py را کنار build_windows.bat کپی کنید.
+۴) روی build_windows.bat دابل‌کلیک کنید.
+۵) خروجی: dist\TITAN_PRO.exe
+۶) دابل‌کلیک روی exe → داشبورد در مرورگر: http://127.0.0.1:8765
+
+داده فقط در این مسیر نوشته می‌شود:
+  C:\Users\ARSAM\Desktop\TITI
+
+اگر نام کاربری ویندوز شما ARSAM نیست، قبل از بیلد در سورس مسیر TITAN_WIN_HOME را عوض کنید.
+
+نصب‌کننده Setup.exe (اختیاری):
+  Inno Setup 6 را نصب کنید → فایل installer.iss را Compile کنید.
