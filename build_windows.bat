@@ -19,6 +19,16 @@ if errorlevel 1 (
 python -c "import sys; print(sys.version)"
 echo.
 
+if not exist TITAN_PRO_V75_WIN_R2.py (
+  echo Assembling source from parts...
+  python assemble_source.py
+  if errorlevel 1 (
+    echo [ERROR] Could not assemble source.
+    pause
+    exit /b 1
+  )
+)
+
 echo [1/4] Upgrading pip...
 python -m pip install --upgrade pip
 
@@ -40,12 +50,8 @@ echo.
 echo Output:  dist\TITAN_PRO.exe
 echo.
 echo How to run:
-echo   1. Copy dist\TITAN_PRO.exe anywhere (or leave it).
-echo   2. Double-click TITAN_PRO.exe
-echo   3. Browser opens http://127.0.0.1:8765
-echo   4. Data is stored ONLY in: C:\Users\ARSAM\Desktop\TITI
-echo      (create that folder or change TITAN_WIN_HOME in the source)
-echo.
-echo Optional API keys: put txt files inside TITI\secrets\
+echo   1. Double-click dist\TITAN_PRO.exe
+echo   2. Browser opens http://127.0.0.1:8765
+echo   3. Data folder: C:\Users\ARSAM\Desktop\TITI
 echo.
 pause
